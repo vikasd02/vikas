@@ -14,7 +14,7 @@ gem 'unicorn'
 
 # added
 gem 'responders'
-gem 'slim'
+gem 'slim-rails'
 gem 'twitter-bootstrap-rails'
 
 group :development, :test do
