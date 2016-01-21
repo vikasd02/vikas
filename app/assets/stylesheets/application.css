@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+
+ .sidebar {
+   margin-top: 1em;
+ }
+ 
+ footer {
+   background-color: rgb(27, 28, 29);
+   color: rgba(116, 119, 123, .75);
+   padding: 4em 0em;
+   margin-top: 4em;
+   position: relative;
+ }
+ 
+ footer ul {
+   list-style-type: none;
+ }
+ 
+ .gutter {
+   background-color: rgb(27, 28, 29);
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   color: #fff;
+ }

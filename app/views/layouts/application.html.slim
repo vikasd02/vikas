@@ -4,7 +4,7 @@ html lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= content_for?(:title) ? yield(:title) : "Alamorecords"
+    title= content_for?(:title) ? yield(:title) : "Alamo Records"
     = csrf_meta_tags
     = stylesheet_link_tag "application", :media => "all"
     = favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
@@ -25,26 +25,50 @@ html lang="en"
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand href="#"Alamorecords
+        a.navbar-brand href="/" Alamo Records
         .navbar-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
-            li= link_to "Link 1", "/path1"
-            li= link_to "Link 2", "/path2"
-            li= link_to "Link 3", "/path3"
+            li= link_to "Publishers", publishers_path
 
     .container
       .row
-        .col-md-9
-          = bootstrap_flash
-          = yield
-        .col-md-3
-          .well.sidebar-nav
-            h3 Sidebar
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+        - if content_for?(:sidebar)
+          .col-md-9
+            = bootstrap_flash
+            = yield
+          .col-md-3
+            = yield(:sidebar)
+        - else
+          .col-md-12
+            = bootstrap_flash
+            = yield
 
-      footer
-        p &copy; Company 2016
+    footer
+      .container
+        .row
+          .col-md-2
+            ul
+              li LATEST
+              li= link_to "Justin Bieber", "/"
+              li= link_to "Sound Garden", "/"
+              li= link_to "Weird Al", "/"
+          .col-md-2
+            ul
+              li OUR TEAM
+              li= link_to "Daren", "/"
+              li= link_to "Jim", "/"
+              li= link_to "Peter", "/"
+              li= link_to "Brandt", "/"
+              li= link_to "Sean", "/"
+          .col-md-2
+            ul
+              li SUPPORT
+              li= link_to "Online Support", "/"
+              li= link_to "Chat Now", "/"
+          .col-md-6
+            ul
+              li ABOUT
+              li Alamo Records sells the hottest vinyl tracks at discount prices to save you gas in the tank and cash in the bank.
+    
+    div.gutter
+            

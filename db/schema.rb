@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120172641) do
+ActiveRecord::Schema.define(version: 20160121195608) do
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "name"
+    t.string   "cover_art"
+    t.integer  "publisher_id"
+    t.date     "released_on"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "albums", ["publisher_id"], name: "index_albums_on_publisher_id"
 
   create_table "publishers", force: :cascade do |t|
     t.string   "name"
