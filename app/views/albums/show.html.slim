@@ -1,26 +1,37 @@
-- model_class = Album
 .page-header
-  h1=t '.title', :default => model_class.model_name.human.titleize
+  h1
+    .pull-right
+      = link_to 'Back', albums_path, class: 'btn btn-default'
+      '
+      = link_to 'Edit', [:edit, @album], class: 'btn btn-default'
+      '
+      = link_to 'Delete', @album, method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+    => @album.name
+    small.text-muted album
 
-p
-  strong= model_class.human_attribute_name(:name) + ':'
-  br
-  = @album.name
-p
-  strong= model_class.human_attribute_name(:cover_art) + ':'
-  br
-  = @album.cover_art
-p
-  strong= model_class.human_attribute_name(:publisher_id) + ':'
-  br
-  = @album.publisher_id
-p
-  strong= model_class.human_attribute_name(:released_on) + ':'
-  br
-  = @album.released_on
+dl.dl-horizontal
+  dt Name
+  dd= @album.name
 
-= link_to t('.back', :default => t("helpers.links.back")), albums_path, :class => 'btn btn-default'
-'
-= link_to t('.edit', :default => t("helpers.links.edit")), edit_album_path(@album), :class => 'btn btn-default'
-'
-= link_to t('.destroy', :default => t("helpers.links.destroy")), album_path(@album), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
+  dt Publisher
+  dd= link_to @album.publisher.name, @album.publisher
+
+  dt Released
+  dd= @album.released_on
+
+hr
+
+
+.page-header
+  h2 Songs
+  
+dl.dl-horizontal
+  dt.text-muted TRACK #
+  dd.text-muted NAME
+  
+  - @album.songs.each_with_index do |song, index|
+    dt= index+1
+    dd= link_to song.name, song
+  
+= content_for :sidebar
+  img.img-thumbnail(src=@album.cover_art)

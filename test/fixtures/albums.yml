@@ -3,11 +3,11 @@
 one:
   name: MyString
   cover_art: MyString
-  publisher_id: 
+  publisher: one
   released_on: 2016-01-21
 
 two:
   name: MyString
   cover_art: MyString
-  publisher_id: 
+  publisher: two
   released_on: 2016-01-21

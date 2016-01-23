@@ -29,6 +29,8 @@ html lang="en"
         .navbar-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
             li= link_to "Publishers", publishers_path
+            li= link_to "Albums", albums_path
+            li= link_to "Artists", artists_path
 
     .container
       .row
@@ -49,9 +51,7 @@ html lang="en"
           .col-md-2
             ul
               li LATEST
-              li= link_to "Justin Bieber", "/"
-              li= link_to "Sound Garden", "/"
-              li= link_to "Weird Al", "/"
+              li ~
           .col-md-2
             ul
               li OUR TEAM

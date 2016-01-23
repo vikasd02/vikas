@@ -1,5 +1,12 @@
 .page-header
-  h1= @publisher.name
+  h1
+    .pull-right
+      = link_to 'Back', publishers_path, :class => 'btn btn-default'
+      '
+      = link_to 'Edit', [:edit, @publisher], :class => 'btn btn-default'
+      '
+      = link_to 'Delete', @publisher, method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+    = @publisher.name
 
 dl.dl-horizontal
   dt Name
@@ -25,18 +32,10 @@ dl.dl-horizontal
 
 hr
 
-= link_to 'Back', publishers_path, :class => 'btn btn-default'
-'
-= link_to 'Edit', [:edit, @publisher], :class => 'btn btn-default'
-'
-= link_to 'Delete', @publisher, method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
-'
-
 = content_for :sidebar
   .well.sidebar-nav.sidebar
-    h3 Sidebar
-    ul.nav.nav-list
-      li.nav-header Sidebar
-      li= link_to "Link 1", "/path1"
-      li= link_to "Link 2", "/path2"
-      li= link_to "Link 3", "/path3"
+    h3 Albums
+    ul.list-inline
+      - @publisher.albums.each do |album|
+        li= link_to album do
+          img(src=album.cover_art style="width:50px")

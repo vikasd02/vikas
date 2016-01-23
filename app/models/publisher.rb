@@ -1,5 +1,6 @@
 class Publisher < ActiveRecord::Base
   has_many :albums
+  has_many :songs, through: :albums
   
   validates :name, length: { in: 5..50 }, uniqueness: true
   validates :address, length: { in: 5..50 }

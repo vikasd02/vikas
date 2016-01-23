@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # cache data to files
+  config.cache_store = :file_store, "/tmp/cache/data"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
