@@ -38,5 +38,4 @@ Complete as many tasks as you can in four hours and then submit a pull request t
   1. The artist index page should display a responsive grid of artist profile images.
   2. The profile images should link to the artist show page.
   3. Initially, the profile images will not exist and a placeholder image should be shown.
-  4. Once a user navigates to the artist show page, and if there is no profile image, an api request should be made to https://randomuser.me to request data for a user. Using the data returned, save the image url to a field on the artist model. Subsequent requests to the same artist should not generate an api call.
-  5. Write tests for a successful api call, a failed api call and a test that ensures only one api call is made per artist.
+  4. Once a user navigates to the artist show page, and if there is no profile image, an api request should be made to https://randomuser.me to request data for a user. Using the data returned, save the image url to a field on the artist model. Subsequent requests to the same artist should not generate an api call. Write tests for this requirement.
