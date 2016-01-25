@@ -8,7 +8,6 @@ Alamo Records is a online store that sells vintage vinyl records. It is built on
 2. Album - albums are sold by publishers and include many songs.
 3. Song - a song is recorded onto one album. It is written by one artist.
 4. Artist - an artist writes songs.
-5. Movie - a movie can include many songs.
 
 The relationships between models are represented in the following diagram:
 
