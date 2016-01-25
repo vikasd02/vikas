@@ -55,3 +55,20 @@ Publisher.pluck(:id).each do |publisher_id|
 end
 
 puts
+print 'Creating songs'
+artist_ids = Artist.pluck(:id)
+Album.pluck(:id).each do |album_id|
+  random_artist = artist_ids.pop
+  artist_ids = Artist.pluck(:id) if artist_ids.empty?
+  random_number_of_songs = 6 + rand(4)
+  random_number_of_songs.times do
+    Song.create name: Faker::Hipster.sentence(1, false, 4),
+      album_id: album_id,
+      artist_id: random_artist
+    print '.'
+  end
+end
+
+puts
+puts "Complete"
+puts "===================="
