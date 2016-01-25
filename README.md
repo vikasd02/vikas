@@ -15,7 +15,7 @@ The relationships between models are represented in the following diagram:
 
 ## Candidate Instructions
 
-Clone the repository, prepare the application and complete each of the tasks listed below. Tasks include styling changes, adding functionality, fixing bugs and writing tests. Each task should be committed separately into Git with a commit message that includes the task number and a short summary of the task.
+Fork the repository, prepare the application and complete each of the tasks listed below. Tasks include styling changes, adding functionality, fixing bugs and writing tests. Each task should be committed separately into Git with a commit message that includes the task number and a short summary of the task.
 
 Do not add any additional gems to the application.
 
