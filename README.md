@@ -32,9 +32,10 @@ Complete as many tasks as you can in four hours and then submit a pull request t
 7. On the album index page, add a delete button for each album that, when pressed, deletes the album via ajax and removes the row from the page.
 8. In the footer, under the LATEST section, display the 5 most recent albums released.
 9. On the artist show page, duplicate albums are being displayed in some cases. Fix this.
-9. Run the tests and fix all that fail.
-10. Write tests for the delete button you added in task 7.
-11. This is your final task. Alamo Records would like to change the artist index page from a table to a grid of artist profile image links. There are no artist profile images available, however, we can use the https://randomuser.me/ service to request fake user data including profile images. Your solution should meet the following requirements:
+10. Run the tests and fix all that fail.
+11. Write tests for the delete button you added in task 7.
+12. Some users have requested an API so they can access Alamo Record data in JSON format. In as little code as possible, enable this functionality.
+13. This is your final task. Alamo Records would like to change the artist index page from a table to a grid of artist profile image links. There are no artist profile images available, however, we can use the https://randomuser.me/ service to request fake user data including profile images. Your solution should meet the following requirements:
   1. The artist index page should display a responsive grid of artist profile images.
   2. The profile images should link to the artist show page.
   3. Initially, the profile images will not exist and a placeholder image should be shown.
