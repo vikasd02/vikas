@@ -31,6 +31,7 @@ Complete as many tasks as you can in four hours and then submit a pull request t
 6. Add code to ensure that when an album is saved, a publisher is required.
 7. On the album index page, add a delete button for each album that, when pressed, deletes the album via ajax and removes the row from the page.
 8. In the footer, under the LATEST section, display the 5 most recent albums released.
+  1. Use a caching technique to prevent this query from executing every request.
 9. On the artist show page, duplicate albums are being displayed in some cases. Fix this.
 10. Run the tests and fix all that fail.
 11. Write tests for the delete button you added in task 7.
