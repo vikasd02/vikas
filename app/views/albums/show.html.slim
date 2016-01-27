@@ -1,10 +1,8 @@
 .page-header
   h1
     .pull-right
-      = link_to 'Back', albums_path, class: 'btn btn-default'
-      '
-      = link_to 'Edit', [:edit, @album], class: 'btn btn-default'
-      '
+      => link_to 'Back', albums_path, class: 'btn btn-default'
+      => link_to 'Edit', [:edit, @album], class: 'btn btn-default'
       = link_to 'Delete', @album, method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
     => @album.name
     small.text-muted album

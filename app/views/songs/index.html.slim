@@ -1,4 +1,7 @@
 .page-header
+  .pull-right
+    = link_to "New", new_song_path, class: 'btn btn-primary'
+    
   h1 Songs
   
 table.table.table-striped
@@ -13,7 +16,4 @@ table.table.table-striped
         td= link_to song.name, song
         td= song.album.name
         td= song.artist.name
-
-hr
-= link_to "New", new_song_path, class: 'btn btn-primary'
 

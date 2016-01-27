@@ -25,7 +25,7 @@ Complete as many tasks as you can in four hours and then submit a pull request t
 
 1. On the publishers index page, change the __H1__ element to the color #054A91.
 2. On the navigation bar, add a link to the songs index page .
-3. Several pages are executing too many queries. Fix them.
+3. Some pages are executing too many queries. Fix them.
 4. In the album model, create a scope called __recent__ that takes an argument __n__ (the number of albums) and returns only the last __n__ albums released during the past 365 days.
 5. On the new/edit album pages, replace the publisher text field with a dropdown that displays each publisher's name.
 6. Add code to ensure that when an album is saved, a publisher is required.
@@ -39,5 +39,5 @@ Complete as many tasks as you can in four hours and then submit a pull request t
 13. This is your final task. Alamo Records would like to change the artist index page from a table to a grid of artist profile image links. There are no artist profile images available, however, we can use the https://randomuser.me/ service to request fake user data including profile images. Your solution should meet the following requirements:
   1. The artist index page should display a responsive grid of artist profile images.
   2. The profile images should link to the artist show page.
-  3. Initially, the profile images will not exist and a placeholder image should be shown.
+  3. Initially, the profile images will not exist and a placeholder image should be shown on the artist index page.
   4. Once a user navigates to the artist show page, and if there is no profile image, an api request should be made to https://randomuser.me to request data for a user. Using the data returned, save the image url to a field on the artist model. Subsequent requests to the same artist should not generate an api call. Write tests for this requirement.
