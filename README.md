@@ -23,14 +23,14 @@ Complete as many tasks as you can in four hours and then submit a pull request t
 
 ### Tasks
 
-1. On the publishers index page, change the `H1` element to the color `#154389`.
-2. On the navigation bar, add a link to the newest artist.
-3. Some pages are executing too many queries. Fix them.
-4. In the song model, create a scope called `recent` that takes an argument `n` (the number of songs) and returns only the last `n` albums released during the past 9 months.
-5. On the new/edit publisher pages, replace the state text field with a dropdown that displays each state's name.
-6. Add code to ensure that when an publisher is saved, a zip is required.
+1. On the publishers index page, change the color of the table header row to  `#F0F8FF`.
+2. On the navigation bar, add a link to the newest album.
+3. The albums index page is executing multiple queries. Fix this.
+4. In the album model, create a scope called `recent` that takes an argument `n` (the number of albums) and returns only the last `n` albums released during the past 4 months.
+5. On the new/edit album pages, replace the publisher text field with a dropdown that displays each publisher's name.
+6. Add code to ensure that when an album is saved, a publisher is required.
 7. On the songs index page, add a delete button for each song that, when pressed, deletes the song via ajax and removes the row from the page.
-8. In the footer, under the LATEST section, display the 3 most recent albums released.
+8. In the footer, under the LATEST section, display the 4 most recent albums released.
   1. Use a caching technique to prevent this query from executing every request.
 9. On the artist show page, duplicate albums are being displayed in some cases. Fix this.
 10. Run the tests and fix all that fail.
@@ -40,4 +40,4 @@ Complete as many tasks as you can in four hours and then submit a pull request t
   1. The artist index page should display a responsive grid of artist profile images. Use the bootstrap grid columns classes to accomplish this.
   2. The profile images should link to the artist show page.
   3. Initially, the profile images will not exist and a placeholder image should be shown on the artist index page.
-  4. Once a user navigates to the artist show page, and if there is no profile image, an api request should be made to https://randomuser.me to request data for a user. Using the data returned, save the image url to a field on the artist model. Subsequent requests to the same artist should not generate an api call.
+  4. Once a user navigates to the artist show page, and if there is no profile image, an api request should be made to https://randomuser.me to request data for a user. Using the data returned, save the image url to a field on the artist model. Subsequent requests to the same artist should not generate an api call. Display the image on the artist show page.
