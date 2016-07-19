@@ -1,3 +1,5 @@
+require 'random_user_generator'
+
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
@@ -9,6 +11,9 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    unless @artist.image_url.present?
+	  @artist.update_attributes(image_url: RandomUserGen.fetch)
+	end 
     respond_with(@artist)
   end
 
