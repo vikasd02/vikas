@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: MyString1
   address: MyString
   city: MyString
-  state: MyString
-  zip: MyString
-  phone: MyString
-  url: MyString
+  state: CA
+  zip: 12345
+  phone: 123-456-7890
+  url: http://www.MyString.com
 
 two:
-  name: MyString
+  name: MyString2
   address: MyString
   city: MyString
-  state: MyString
-  zip: MyString
-  phone: MyString
-  url: MyString
+  state: TX
+  zip: 12345
+  phone: 123-456-7899
+  url: http://www.MyString.com

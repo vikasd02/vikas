@@ -14,7 +14,6 @@ class Album < ActiveRecord::Base
   
   def self.recent_albums(n=2)
     Rails.cache.fetch("recent_two_albums") do
-	    puts "Creating cache first time"
 	   Album.order(released_on: :desc).first(n)
 	end 
   end
