@@ -37,3 +37,7 @@
    width: 100%;
    color: #fff;
  }
+
+ tr.coloredheader {
+   background-color: #9B59B6;
+ }
