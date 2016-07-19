@@ -10,10 +10,12 @@ table.table.table-striped
       th name
       th album
       th artist
+	  th
   tbody
     - @songs.each do |song|
-      tr
+      tr id=song.id
         td= link_to song.name, song
         td= song.album.name
         td= song.artist.name
+		td= link_to "Delete", song, method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', remote: true 
 
