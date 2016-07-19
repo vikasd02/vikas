@@ -9,4 +9,9 @@ class Publisher < ActiveRecord::Base
   validates :zip, format: { with: /\A\d{5}\z/, message: "should be five digits" }
   validates :phone, format: { with: /\A\d{3}-\d{3}-\d{4}\z/, message: "should look like 210-555-1234" }
   validates :url, format: { with: /\Ahttp:\/\/.+\z/, message: "should look like http://www.yahoo.com" }
+  
+  def to_select_string
+    "Name: #{self.name} City: #{self.city} State: #{self.state}"
+  end 
+  
 end
