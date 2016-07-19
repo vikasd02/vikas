@@ -9,4 +9,18 @@ class Album < ActiveRecord::Base
   
   scope :newest, lambda { order(released_on: :desc).first }
   scope :recent, lambda {|n| where("released_on >= ?", 6.months.ago).order(released_on: :desc).first(n)}
+  
+  after_save :clear_recent_albums_cache
+  
+  def self.recent_albums(n=2)
+    Rails.cache.fetch("recent_two_albums") do
+	    puts "Creating cache first time"
+	   Album.order(released_on: :desc).first(n)
+	end 
+  end
+  
+  def clear_recent_albums_cache
+    Rails.cache.delete("recent_two_albums")
+  end 
+  
 end
