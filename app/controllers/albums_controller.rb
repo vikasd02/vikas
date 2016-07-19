@@ -1,7 +1,5 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
-  before_action :set_publishers, only: [:new, :edit]
-
   respond_to :html
 
   def index
@@ -45,8 +43,5 @@ class AlbumsController < ApplicationController
     def album_params
       params.require(:album).permit(:name, :cover_art, :publisher_id, :released_on)
     end
-	
-	def set_publishers
-	  @publishers_array = Publisher.select(:id, :name, :city, :state).map{|publisher| [publisher.to_select_string ,publisher.id]} 
-	end 
+
 end
